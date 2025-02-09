@@ -398,6 +398,11 @@ const Navbar = () => {
   return (
     <div className="flex h-[43px] bg-[#161617] w-full">
         <img src={logo} alt="hello" className="h-[18px] ml-[443px] mt-3 cursor-pointer"/>
+      {navbarLinks.map(link => (
+          <div key={Math.random()} className="flex"> 
+           <a className="text-white text-[13px] ml-[36px] blur-[0.45px] mt-3" href={link.mainLink}>{link.mainLabel}</a>
+          </div>
+      ))}
     </div>
   )
 }
